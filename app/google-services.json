@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "650015736842",
+    "project_id": "find-teacher-8f307",
+    "storage_bucket": "find-teacher-8f307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650015736842:android:580d4349736c8873354bf3",
+        "android_client_info": {
+          "package_name": "com.proyecto.findteacherapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl52b2JVwIEuEwam6UOSuJ7OfcAsDILXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

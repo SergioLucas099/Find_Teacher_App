@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccionAreaConocimiento">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <io.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:elevation="4dp"
+            app:shape_arc_height="20dp"
+            app:shape_arc_position="bottom">
+
+            <View
+                android:id="@+id/ImgFondoMate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fondo_mate"
+                android:visibility="invisible"/>
+
+            <View
+                android:id="@+id/ImgFondoIdiomas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fondo_idiomas"
+                android:visibility="invisible"/>
+
+            <View
+                android:id="@+id/ImgFondoDeportes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fondo_deportes"
+                android:visibility="invisible"/>
+
+            <View
+                android:id="@+id/ImgFondoArte"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fondo_arte"
+                android:visibility="invisible"/>
+
+            <View
+                android:id="@+id/ImgFondoGeografia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fondo_geografia"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/AtrasAccionesA"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24_white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ImgMate"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/matematicas"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ImgIdiomas"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/idiomas"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ImgDeportes"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/deportes"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ImgArte"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/pasatiempo"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ImgGeografia"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/globo"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/TxtAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/architects_daughter"/>
+
+            </LinearLayout>
+
+        </io.github.florent37.shapeofview.shapes.ArcView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv_area_conocimiento_anuncio"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:queryHint="Buscar..."
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerAreaC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

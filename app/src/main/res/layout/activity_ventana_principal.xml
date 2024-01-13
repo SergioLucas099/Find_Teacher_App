@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VentanaPrincipal">
+
+    <include layout="@layout/action_bar_toolbar" ></include>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/profesor"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarjetas de Presentación"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/architects_daughter"
+                    android:layout_marginTop="20dp"/>
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    app:iss_period="2000"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="2000"
+                    app:iss_corner_radius="10"
+                    app:iss_title_background="@drawable/gradient"
+                    android:id="@+id/imageSlider"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categorias"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/architects_daughter"/>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/AccionMatematicas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/matematicas"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Matemáticas"
+                                android:textSize="17dp"
+                                android:fontFamily="@font/architects_daughter"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/AccionIdiomas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="15dp">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/idiomas"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Idiomas"
+                                android:textSize="17dp"
+                                android:fontFamily="@font/architects_daughter"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/AccionDeporte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="15dp">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/deportes"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Deportes"
+                                android:textSize="17dp"
+                                android:fontFamily="@font/architects_daughter"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/AccionArte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="15dp">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/pasatiempo"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Arte"
+                                android:textSize="17dp"
+                                android:fontFamily="@font/architects_daughter"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/AccionGeografias"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="15dp">
+
+                            <ImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/globo"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Geografia"
+                                android:textSize="17dp"
+                                android:fontFamily="@font/architects_daughter"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/sv_profesor"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:queryHint="Buscar..."
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anuncios"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/architects_daughter"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_anuncios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    app:reverseLayout="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
